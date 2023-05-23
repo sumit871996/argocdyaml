@@ -17,4 +17,3 @@ spec:
           image: sumithpe/poc6ang:latest
           ports:
             - containerPort: 80
-            port: 8000
