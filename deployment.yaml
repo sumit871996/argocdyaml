@@ -16,4 +16,4 @@ spec:
       - name: myapp1
         image: sumithpe/h2o:latest
         ports:
-        - containerPort: 80
+        - containerPort: 54321
