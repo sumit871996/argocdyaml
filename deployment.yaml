@@ -13,7 +13,7 @@ spec:
         app: myapp1
     spec:
       containers:
-      - name: myapp1
-        image: sumithpe/poc6ang:latest
-        ports:
-        - containerPort: 80
+        - name: myapp1
+          image: sumithpe/poc6ang:latest
+          ports:
+            - containerPort: 80
