@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp1
-        image: sumithpe/h2o:latest
+        image: sumithpe/poc6ang:latest
         ports:
-        - containerPort: 54321
+        - containerPort: 80
