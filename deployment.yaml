@@ -16,5 +16,4 @@ spec:
         - name: myapp1
           image: sumithpe/poc6ang:latest
           ports:
-            - port: 8000
-              containerPort: 80
+            - containerPort: 80
