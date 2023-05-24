@@ -7,6 +7,8 @@ spec:
   selector:
     matchLabels:
       app: mssql
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
@@ -29,8 +31,8 @@ spec:
             - name: MSSQL_SA_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mssql
-                  key: MSSQL_SA_PASSWORD
+                  name: mssql-secret
+                  key: SA_PASSWORD
           volumeMounts:
             - name: mssqldb
               mountPath: /var/opt/mssql
@@ -38,3 +40,4 @@ spec:
         - name: mssqldb
           persistentVolumeClaim:
             claimName: mssql-data
+            volumes:
