@@ -8,5 +8,4 @@ spec:
     app: mssqldatabase
   ports:
     - targetPort: 1433
-      protocol: TCP
       port: 1433
