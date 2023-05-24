@@ -4,7 +4,7 @@ metadata:
   name: mssql-deployment
 spec:
   selector:
-    app: mssql
+    app: MSSQLLocalDB
   ports:
     - protocol: TCP
       port: 1433
