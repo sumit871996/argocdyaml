@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssqldatabase
+spec:
+  selector:
+    matchLabels:
+      app: mssqldatabase
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: mssqldatabase
+    spec:
+      containers:
+        - name: MSSQLLocalDB
+          image: mcr.microsoft.com/mssql/server
+          resources:
+            requests:
+              memory: "2G"
+              cpu: "2000m"
+            limits:
+              memory: "2G"
+              cpu: "2000m"
+          env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: MSSQL_SA_PASSWORD
+              value: "Sumit@mssql8796"
+          volumeMounts:
+            - name: mssqldb
+              mountPath: /var/opt/mssql
+          ports:
+            - containerPort: 1433
+    volumes:
+      - name: mssqldb
+        persistentVolumeClaim:
+          claimName: mssql-data
