@@ -22,12 +22,5 @@ spec:
               value: "Y"
             - name: MSSQL_SA_PASSWORD
               value: "Sumit@mssql8796"
-          volumeMounts:
-            - name: mssqldb
-              mountPath: /var/opt/mssql
           ports:
             - containerPort: 1433
-    volumes:
-      - name: mssqldb
-        persistentVolumeClaim:
-          claimName: mssql-data
