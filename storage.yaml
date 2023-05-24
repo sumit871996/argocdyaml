@@ -14,6 +14,7 @@ metadata:
   annotations:
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:
+  storageClassName: azure-disk
   accessModes:
     - ReadWriteOnce
   resources:
