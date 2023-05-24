@@ -15,13 +15,6 @@ spec:
       containers:
         - name: MSSQLLocalDB
           image: mcr.microsoft.com/mssql/server
-          resources:
-            requests:
-              memory: "2G"
-              cpu: "2000m"
-            limits:
-              memory: "2G"
-              cpu: "2000m"
           env:
             - name: ACCEPT_EULA
               value: "Y"

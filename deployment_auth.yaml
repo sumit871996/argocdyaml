@@ -15,12 +15,5 @@ spec:
       containers:
         - name: poc6authcon
           image: sumithpe/poc6auth:latest
-          resources:
-            requests:
-              memory: "2G"
-              cpu: "2000m"
-            limits:
-              memory: "2G"
-              cpu: "2000m"
           ports:
             - containerPort: 80
